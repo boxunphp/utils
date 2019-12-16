@@ -8,7 +8,7 @@
 
 namespace All\Utils;
 
-class HttpStatus
+class HttpCode
 {
     // 成功
     const OK = 200;
@@ -108,8 +108,8 @@ class HttpStatus
         self::HTTP_VERSION_NOT_SUPPORTED => 'HTTP Version Not Supported',
     ];
 
-    public static function message($status)
+    public static function message($code)
     {
-        return empty(self::$messageConfig[$status]) ? '' : self::$messageConfig[$status];
+        return empty(self::$messageConfig[$code]) ? '' : self::$messageConfig[$code];
     }
 }
