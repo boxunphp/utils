@@ -2,7 +2,7 @@
 
 namespace All\Utils;
 
-use Ali\InstanceTrait;
+use All\Instance\InstanceTrait;
 
 class Str
 {
@@ -21,7 +21,7 @@ class Str
     /**
      * 隐藏手机号码中间位
      */
-    function hidePhone($phone)
+    public function hidePhone($phone)
     {
         if (empty($phone) || strlen($phone) != 11) {
             return $phone;
@@ -33,7 +33,7 @@ class Str
     /**
      * 去除首尾全角及半角空格,多个空格合并为一个
      */
-    function trim($str)
+    public function trim($str)
     {
         $str = preg_replace('/( |　|\r\n|\r|\n)+/', ' ', $str);
         return trim(preg_replace("/^　+|　+$/ ", " ", $str));
