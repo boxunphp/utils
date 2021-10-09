@@ -32,4 +32,11 @@ trait ErrorTrait
     {
         $this->errMsg = $message;
     }
+
+    public function setError($code, $message)
+    {
+        $this->setErrorCode($code);
+        $this->setErrorMessage($message);
+        return false;
+    }
 }
